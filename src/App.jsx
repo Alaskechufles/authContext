@@ -1,3 +1,8 @@
+import { Route, Routes } from "react-router"
+import Home from "./pages/Home"
+import Login from "./pages/Login"
+import Dashboard from "./pages/Dashboard"
+
 
 
 function App() {
@@ -5,7 +10,12 @@ function App() {
 
   return (
     <>
+      <Routes>
+        <Route path="/" element={<Home />}></Route>
+        <Route path="/login" element={<Login />}></Route>
 
+        <Route path="/dashboard" element={<Dashboard />}></Route>
+      </Routes>
     </>
   )
 }
